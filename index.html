@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>鸿蒙手记 · 华为终端与 HarmonyOS 使用手册</title>
+<meta name="description" content="鸿蒙（HarmonyOS）使用手册、鸿蒙电脑（HarmonyOS PC）指南、华为终端与生态互联技巧。一套可以直接照着做的实操笔记。">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1013" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="鸿蒙手记 · 华为终端与 HarmonyOS 使用手册">
+<meta property="og:description" content="鸿蒙手册、鸿蒙电脑指南、华为终端与生态互联实战笔记。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dh5.de5.net/">
+<link rel="canonical" href="https://dh5.de5.net/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23cf0a2c'/><text x='50' y='70' font-size='58' font-family='system-ui,sans-serif' font-weight='700' fill='white' text-anchor='middle'>鸿</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  // 主题在首次绘制前定好，避免闪白
+  (function () {
+    try {
+      var saved = localStorage.getItem('dh5-theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = saved || sys;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#/" aria-label="回到首页">
+      <span class="brand-mark">鸿</span>
+      <span class="brand-text">鸿蒙手记<small>HarmonyOS Notes</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="nav-links" aria-label="站内导航">
+      <a href="#/cat/鸿蒙手册">鸿蒙手册</a>
+      <a href="#/cat/鸿蒙电脑">鸿蒙电脑</a>
+      <a href="#/cat/华为终端">华为终端</a>
+      <a href="#/cat/生态互联">生态互联</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" title="切换深色 / 浅色" aria-label="切换深色或浅色主题">
+      <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <span class="hero-eyebrow">HarmonyOS · 实操笔记</span>
+  <h1>把鸿蒙的设备，<em>用明白</em>。</h1>
+  <p>鸿蒙电脑的上手设置、超级终端与多屏协同的实战流程、省电与隐私的逐项开关、穿戴与音频的联动玩法。每条都写成可以直接照着点的步骤，不讲概念，不凑篇幅。</p>
+  <ul class="hero-stats">
+    <li><b id="statCount">9</b> 篇指南</li>
+    <li><b>4</b> 个分类</li>
+    <li>更新于 <b id="statDate">2026-11-15</b></li>
+  </ul>
+</section>
+
+<div class="toolbar" id="toolbar">
+  <div class="toolbar-inner">
+    <div class="tabs" id="tabs" role="tablist" aria-label="文章分类"></div>
+    <div class="search">
+      <span class="lens" aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="搜索文章 / 关键词…" autocomplete="off" aria-label="搜索文章">
+      <kbd class="kbd">/</kbd>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- 列表视图 -->
+  <div id="listView">
+    <div class="list-head">
+      <h2 id="listTitle">全部文章</h2>
+      <span class="result" id="listResult"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="hint">文章数据集中在 <b>posts/posts.js</b>：复制一段、改标题和正文就能发布新文章，无需任何构建工具。</p>
+  </div>
+
+  <!-- 阅读视图 -->
+  <article id="readerView" class="reader" hidden></article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> 鸿蒙手记 · dh5.de5.net</span>
+    <span>内容为个人使用经验整理，系统路径与功能以你的机型、HarmonyOS 版本为准。</span>
+  </div>
+</footer>
+
+<script src="posts/posts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
